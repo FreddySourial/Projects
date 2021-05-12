@@ -1,0 +1,51 @@
+/* CST8110 - Introduction to Computer Programming
+ * Section: 472
+ * Semester: 20F
+ * Professor: Wail Mardini
+ * Student ID: 041013272
+ * Student Email: sour0025@algonquinlive.com
+ * Assignment 1
+ */
+
+//the name of the college is Algonquin college 
+
+/* my favourite sport is soccer! I have grown up playing it and it has been a passion of mine for a long time 
+although I also really enjoy watching and playing football!
+*/ 
+
+
+
+public class Assignment1 {
+
+    public static void main(String[] args) {
+	
+    	
+       // uncomment the following three lines and replace 0400012 with your id and my name with your name 
+         String name="Freddy Sourial";
+         String id1="041013272";
+         int id2=41013272; 
+        
+    
+       // uncomment the following line and correct any error in it
+        System.out.println("------------------------------");
+
+
+       // replace each of the following lines with the required statement
+       
+       // write a println statement to print any welcome message. example println("");
+		System.out.println("Welcome to assignment#1 for intro to programming!");
+       // write a println statement to print name above. example println(name);
+		System.out.println (name);
+       // write a println statement to print id1 and then another println for id2
+		System.out.println(id1);
+		System.out.println (id2);
+       // write a println statement without any argument 
+	  System.out.println ("no arguments");
+       // write a print statement to print id1 and then another print for id2
+	   System.out.println (id1);
+		System.out.println (id2);
+        
+       
+	} // end method main
+
+} // end class Assignment1

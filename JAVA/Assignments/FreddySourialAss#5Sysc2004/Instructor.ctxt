@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Instructor
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Instructor\ here.\r\n\r\n\ @author\ (Freddy\ Sourial)\r\n\ @version\ (april\ 3rd)\r\n
+comment1.params=
+comment1.target=Instructor()
+comment2.params=instructorname\ instructorid\ instructoremail\ instructornumber\ facultyember
+comment2.target=Instructor(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment3.params=
+comment3.target=void\ printFacMember()
+comment4.params=
+comment4.target=java.lang.String\ getFacMember()
+numComments=5

@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=TestMax
+comment0.text=\ CST8110\ -\ Introduction\ to\ Computer\ Programming\r\n\ Section\:\ 472\r\n\ Semester\:\ 20F\r\n\ Professor\:\ Wail\ Mardini\r\n\ Student\ ID\:\ 041013272\r\n\ Student\ Email\:\ sour0025@algonquinlive.com\r\n\ Assignment\ 2\r\n
+comment1.params=
+comment1.target=TestMax()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ TestMax\r\n
+comment2.params=
+comment2.target=int\ inputNum()
+comment3.params=userNum
+comment3.target=void\ displayNum(int)
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5
