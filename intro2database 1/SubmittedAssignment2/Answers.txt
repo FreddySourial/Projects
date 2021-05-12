@@ -1,0 +1,22 @@
+1. Answer the following questions:
+i. What are the total number of customers in the database for ecommerce website?
+Ans.) 200
+ii. How many distinct products categories are available in the ecommerce website?
+Ans.) 9
+iii. How many shipping addresses are from Ontario?
+Ans.) 21
+iv. Which payment type is most common? Cash, Credit or Debit.
+Ans.) credit card
+v. How many invoices were issued in 2013?
+Ans.) 21
+vi. Display everything FROM customers Inner Join shipping_details ON shipping_detail_id? How many results are displayed? 
+Ans.) 200
+vii. Which three products (product_id) is ordered the most by customers in customer_product table (hint – Read Module 9, ignore the ordered_amount column)?
+Ans.) 12 , 39 , 40
+viii. What is the highest amount on the invoice? (Hint: Read Module 9)
+Ans.) 250 
+ix. What is the invoice no. dated 2014-03-11?(Enter the Invoice No. for answer)
+Ans.) 34044 
+
+
+
