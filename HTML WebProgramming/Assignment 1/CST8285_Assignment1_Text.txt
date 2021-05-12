@@ -1,0 +1,25 @@
+- Title of the page "About <your first and last name>" [1 mark]
+
+- Your first and last name (heading 1) [1 mark]
+
+- Insert an image, either of yourself or one that you like  [1 mark]
+<Could be anything decent, appropriate and not offensive in any way>
+<Max size 300 x 300>
+
+- A brief description of who I am (heading 2) [1 mark]
+< A text paragraph with emphasis on at least 3 keywords and another 3 keywords as marked important>
+
+- Qualifications (heading 2) [2 marks]
+< A list of qualifications. Max of five. Each of heading 3>
+<Mark some keywords as emphasized>
+<unordered list>
+
+- Accomplishments  [1 marks]
+< A list of accomplishments. Max of five. Each of heading 3>
+<Include using superscript, italic and underlined, each applied on a separate accomplishment>
+<ordered list>
+
+- Copyright with the copyright logo (c inside a circle) and with date [1 mark]
+<fine print>
+
+[2 mark] for error free validation

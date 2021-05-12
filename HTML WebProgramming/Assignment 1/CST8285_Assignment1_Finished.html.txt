@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> About Freddy Sourial </title>
+</head>
+<body>
+<h1> Freddy Sourial <h1>
+<img src="FreddySourial.jpg" alt="Freddy Sourial" style="width:300px;height:300px;">
+<h2 lang="en">Who am I </h2>
+<p> My name is Freddy Sourial. I am currently finsihing a bachelor of <em> Engineering </em> at <em> Carleton </em> <em> University </em> while also doing this <strong> computer </strong> <strong> programming </strong>  <strong> diploma </strong>. I look forward to learning more about html and php and gaining more experience. </p> 
+<h2 lang="en">Qualifications</h2>
+<h3>Some of my qualifications include <ul> <li> <em>CPR certification </em>  </li> <li> <em>Knowledge in C++ </em> </li> <li> <em>Knowledge in Phython </em> </li> </ul> </h3> 
+
+<h2 lang="en">Accomplishments</h2>
+<h3>Some of my Accomplishments include <ol> <li> <i>Grade 12 diploma </i>  </li> <li> <i>enrolled at Carleton University </i> </li> <li> <sup> six year service medal in Cadets </sup> </li> </ol> </h3> 
+<p> &#169; </p>
+</body>
+</html>

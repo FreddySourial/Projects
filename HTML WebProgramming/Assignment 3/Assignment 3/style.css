@@ -1,0 +1,83 @@
+/* CSS Document */
+/* CSS Reset */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#top {
+background-color: #33ff88;
+margin-top: 15px;
+padding-top: 10px;
+border: 2px solid grey;
+width: 1000px;
+margin-left: auto;
+margin-right: auto;
+}
+
+fieldset{
+margin-top: 4px;
+background-color: #8f8e6e;
+}
+
+legend {
+color: #d46622;
+background-color: #ccadbe;
+border: 1px solid #72072e;
+padding: 3px;
+font-weight: bold;
+}
+
+table {
+margin: 4px;
+padding: 4px;
+}
+
+td {
+padding: 2px;
+}
+
+.required {
+color: #FFa600;
+}
+
+#data * {
+padding-left: 8px;
+}
+
+/*
+CSS Style Instructions:
+ 
+1. Create a rule for an id called 'top', set the:
+- background color to #33ff88
+- top margin to 15pxd 
+- top padding to 10px
+- border to be grey, with a width of 2px
+- width to 1000px
+- left and right margins to 'auto'
+
+2. As for fieldset elements, set the:
+- top margin to 4px
+- background color to #8f8e6e
+
+3. For legend elements, set the:
+- text color to #d46622
+- background color to #ccadbe
+- border to 1px wide solid border with a color of #72072e
+- padding to 3px
+- font weight to bold
+
+4. For tables, set the: 
+- margin to 4px
+- padding to 4px
+
+5. For td elements, set the: 
+- padding to 2px
+
+6. For a class called 'required'. Set the:
+- text color to #ffa600
+
+7. As for <p> elements, descendant of an element with an id 'data'. Set the:
+- left padding to 8px
+
+*/
