@@ -1,0 +1,66 @@
+CREATE TABLE [ADDRESS] (
+  [AddressID] int,
+  [Address] varchar(200),
+  [ZipCode] varchar(10),
+  [City] varchar(100),
+  [State] varchar(100),
+  [Country] varchar(100),
+  PRIMARY KEY ([AddressID])
+);
+CREATE TABLE [POSITION] (
+  [PositionID] int,
+  [P_Title] varchar(50),
+  PRIMARY KEY ([PositionID])
+);
+CREATE TABLE [DEPARTMENT] (
+  [DepartmentID] int,
+  [Dname] varchar(50),
+  PRIMARY KEY ([DepartmentID])
+);
+CREATE TABLE [SKILLS] (
+  [SkillID] int,
+  [SkillName] varchar(50),
+  PRIMARY KEY ([SkillID])
+);
+CREATE TABLE [PRODUCT] (
+  [ProductID] int,
+  [ProductName] varchar(200),
+  [QuantityInStock] int,
+  [Price] float,
+  PRIMARY KEY ([ProductID])
+);
+CREATE TABLE [Employee] (
+  [EmployeeID] int,
+  [DepartmentID] int FOREIGN KEY REFERENCES DEPARTMENT(DepartmentID),
+  [PositionID] int FOREIGN KEY REFERENCES POSITION(PositionID),
+  [FirstName] varchar(50),
+  [LastName] varchar(50),
+  [Salary] float,
+  [AddressID] int FOREIGN KEY REFERENCES ADDRESS(AddressID),
+  PRIMARY KEY ([EmployeeID])
+);
+
+CREATE TABLE [CUSTOMER] (
+  [CustomerID] int,
+  [AddressID] int FOREIGN KEY REFERENCES ADDRESS(AddressID),
+  [CustomerName] varchar(200),
+  [EmployeeID] int FOREIGN KEY REFERENCES Employee(EmployeeID),
+  PRIMARY KEY ([CustomerID])
+);
+
+CREATE TABLE [EMPLOYEE_SKILLS] (
+  [EmployeeID] int FOREIGN KEY REFERENCES Employee(EmployeeID),
+  [SkillID] int FOREIGN KEY REFERENCES SKILLS(SkillID),
+  PRIMARY KEY ([EmployeeID], [SkillID])
+);
+
+
+CREATE TABLE [PURCHASES] (
+  [PurchaseID] int,
+  [CustomerID] int FOREIGN KEY REFERENCES CUSTOMER(CustomerID),
+  [ProductID] int FOREIGN KEY REFERENCES PRODUCT(ProductID),
+  [PurchaseDate] datetime,
+  [DeliveryDate] datetime,
+  PRIMARY KEY ([PurchaseID])
+);
+

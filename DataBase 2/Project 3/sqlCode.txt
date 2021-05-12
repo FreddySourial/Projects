@@ -1,0 +1,114 @@
+CREATE TABLE `COURSE` (
+  `CourseID` int NOT NULL AUTO_INCREMENT,
+  `CourseTitle` varchar(15),
+  `TutionFee` int,
+  PRIMARY KEY (`CourseID`)
+);
+
+CREATE TABLE `STUDENT` (
+  `StudentID` int NOT NULL AUTO_INCREMENT,
+  `SectionID` int,
+  `FirstName` varchar(50),
+  `LastName` varchar(50),
+  `PhoneNumber` varchar(15),
+  `PhoneType` varchar(15),
+  `AddressID` int,
+  `DepartmentID` int,
+  `ProgarmID` int,
+  PRIMARY KEY (`StudentID`)
+);
+
+CREATE TABLE `PROGRAM` (
+  `ProgarmID` int NOT NULL AUTO_INCREMENT,
+  `ProgarmTitle` varchar(15) DEFAULT 'Data Science',
+  PRIMARY KEY (`ProgarmID`)
+);
+
+CREATE TABLE `PROVINCE` (
+  `ProvinceID` int NOT NULL AUTO_INCREMENT,
+  `ProvinceName` varchar(15),
+  PRIMARY KEY (`ProvinceID`)
+);
+
+CREATE TABLE `DEPARTMENT` (
+  `DepartmentID` int NOT NULL AUTO_INCREMENT,
+  `DepartmentName` varchar(30),
+  PRIMARY KEY (`DepartmentID`)
+);
+
+CREATE TABLE `ADDRESS` (
+  `AddressID` int NOT NULL AUTO_INCREMENT,
+  `Address` varchar(50),
+  `AddressType` varchar(15),
+  `CityID` int,
+  `ProvinceID` int,
+  `CountryID` int,
+  PRIMARY KEY (`AddressID`)
+);
+
+CREATE TABLE `COUNTRY` (
+  `CountryID` int NOT NULL AUTO_INCREMENT,
+  `CountryName` varchar(15),
+  PRIMARY KEY (`CountryID`)
+);
+
+CREATE TABLE `CITY` (
+  `CityID` int NOT NULL AUTO_INCREMENT,
+  `CityName` varchar(15),
+  PRIMARY KEY (`CityID`)
+);
+
+CREATE TABLE `SECTION` (
+  `SectionID` int NOT NULL AUTO_INCREMENT,
+  `SectionName` varchar(50),
+  PRIMARY KEY (`SectionID`)
+);
+
+CREATE TABLE `STUDENT_COURSE` (
+  `StudentID` int,
+  `CourseID` int,
+  `ProfessorID` int,
+  `PercentGrade` DECIMAL(4,1),
+  `LetterGrade` DECIMAL(4,1),
+  PRIMARY KEY (`StudentID`, `CourseID`)
+);
+
+CREATE TABLE `PROFESSOR` (
+  `ProfessorID` int NOT NULL AUTO_INCREMENT,
+  `Salutation` varchar(50) DEFAULT 'Dr',
+  `FirstName` varchar(50),
+  `LastName` varchar(50),
+  `DepartmentID` int,
+  PRIMARY KEY (`ProfessorID`)
+);
+
+CREATE TABLE `PROGRAM_COURSE` (
+  `ProgarmID` int,
+  `CourseID` int,
+  PRIMARY KEY (`ProgarmID`, `CourseID`)
+);
+
+
+
+ALTER TABLE ADDRESS
+ADD FOREIGN KEY (CityID) REFERENCES CITY(CityID),
+ADD FOREIGN KEY (ProvinceID) REFERENCES PROVINCE(ProvinceID),
+ADD FOREIGN KEY (CountryID) REFERENCES COUNTRY(CountryID);
+
+ALTER TABLE STUDENT
+ADD FOREIGN KEY (SectionID) REFERENCES SECTION(SectionID),
+ADD FOREIGN KEY (AddressID) REFERENCES ADDRESS(AddressID),
+ADD FOREIGN KEY (DepartmentID) REFERENCES DEPARTMENT(DepartmentID),
+ADD FOREIGN KEY (ProgarmID) REFERENCES PROGRAM(ProgarmID);
+
+ALTER TABLE STUDENT_COURSE
+ADD FOREIGN KEY (StudentID) REFERENCES STUDENT(StudentID),
+ADD FOREIGN KEY (CourseID) REFERENCES COURSE(CourseID),
+ADD FOREIGN KEY (ProfessorID) REFERENCES PROFESSOR(ProfessorID);
+
+ALTER TABLE PROGRAM_COURSE
+ADD FOREIGN KEY (ProgarmID) REFERENCES PROGRAM(ProgarmID),
+ADD FOREIGN KEY (CourseID) REFERENCES COURSE(CourseID);
+
+ALTER TABLE PROFESSOR
+ADD FOREIGN KEY (DepartmentID) REFERENCES DEPARTMENT(DepartmentID);

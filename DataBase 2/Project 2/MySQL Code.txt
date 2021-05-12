@@ -1,0 +1,74 @@
+CREATE TABLE ADDRESS (
+  `AddressID` int,
+  `Address` varchar(200),
+  `ZipCode` varchar(10),
+  `City` varchar(100),
+  `State` varchar(100),
+  `Country` varchar(100),
+  PRIMARY KEY (`AddressID`)
+);
+CREATE TABLE POSITION (
+  `PositionID` int,
+  `P_Title` varchar(50),
+  PRIMARY KEY (`PositionID`)
+);
+CREATE TABLE DEPARTMENT (
+  `DepartmentID` int,
+  `Dname` varchar(50),
+  PRIMARY KEY (`DepartmentID`)
+);
+CREATE TABLE SKILLS (
+  `SkillID` int,
+  `SkillName` varchar(50),
+  PRIMARY KEY (`SkillID`)
+);
+CREATE TABLE PRODUCT (
+  `ProductID` int,
+  `ProductName` varchar(200),
+  `QuantityInStock` int,
+  `Price` double,
+  PRIMARY KEY (`ProductID`)
+);
+CREATE TABLE Employee (
+  `EmployeeID` int,
+  `DepartmentID` int,
+  `PositionID` int ,
+  `FirstName` varchar(50),
+  `LastName` varchar(50),
+  `Salary` float,
+  `AddressID` int,
+  PRIMARY KEY (`EmployeeID`),
+     FOREIGN KEY (DepartmentID) REFERENCES `DEPARTMENT`(DepartmentID),
+    FOREIGN KEY (PositionID) REFERENCES `POSITION`(PositionID)
+);
+
+CREATE TABLE CUSTOMER (
+  `CustomerID` int,
+  `AddressID` int,
+  `CustomerName` varchar(200),
+  `EmployeeID` int,
+  PRIMARY KEY (`CustomerID`),
+      FOREIGN KEY (AddressID) REFERENCES `ADDRESS`(AddressID),
+    FOREIGN KEY (EmployeeID) REFERENCES `Employee`(EmployeeID)
+);
+
+CREATE TABLE EMPLOYEE_SKILLS (
+  `EmployeeID` int,
+  `SkillID` int,
+  PRIMARY KEY (`EmployeeID`, `SkillID`),
+    FOREIGN KEY (EmployeeID) REFERENCES `Employee`(EmployeeID),
+    FOREIGN KEY (SkillID) REFERENCES `SKILLS`(SkillID)
+);
+
+
+CREATE TABLE PURCHASES (
+  `PurchaseID` int,
+  `CustomerID` int,
+  `ProductID` int ,
+  `PurchaseDate` datetime,
+  `DeliveryDate` datetime,
+  PRIMARY KEY (`PurchaseID`),
+    FOREIGN KEY (CustomerID) REFERENCES `CUSTOMER`(CustomerID),
+    FOREIGN KEY (ProductID) REFERENCES `PRODUCT`(ProductID)
+);
+
